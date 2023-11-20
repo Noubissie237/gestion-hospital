@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFIL MÉDICAL</title>
+    <link rel="stylesheet" href="{% static '../staticfiles/css/style/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '../staticfiles/css/bootstrap/bootstrap.min.css' %}">
+    <link rel="shortcut icon" href="{% static '../staticfiles/img/images.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-8">
+                <span style="font-size: 10vmax;">F</span>
+                <span style="font-size: 5vmax;">P</span>
+            </div>
+            <div class="col-4">
+                <strong>GENRE:</strong> <mark>{{sexe}}</mark>   <br>
+                <strong>AGE :</strong>  <mark>{{age}}</mark>  <br>
+            </div>
+        </div>
+        <hr>
+        <p style="font-size: 2vmax;">
+            Prescriptions
+        </p>
+        <div class="container text-center mt-5" style="font-size: 1vmax;">
+            {{prescription1}}.............................................................................................. <br>
+            {{prescription2}}.............................................................................................. <br>
+            {{prescription3}}.............................................................................................. <br>
+        </div>
+    </div>
+</body>
+</html>

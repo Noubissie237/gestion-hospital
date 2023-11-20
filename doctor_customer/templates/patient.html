@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFIL MÉDICAL</title>
+    <link rel="stylesheet" href="{% static '../staticfiles/css/style/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '../staticfiles/css/bootstrap/bootstrap.min.css' %}">
+    <link rel="shortcut icon" href="{% static '../staticfiles/img/images.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Profil Médical</h1>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Informations Personnelles
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Nom :</label>
+                        <input type="text" class="form-control" id="name" value="{{nom}}" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="subname" class="form-label">Prenom :</label>
+                        <input type="text" class="form-control" id="subname" value="{{prenom}}" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="age" class="form-label">Age :</label>
+                        <input type="text" class="form-control" id="age" value="{{age}} ans" readonly>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="poids" class="form-label">Poids :</label>
+                            <input type="text" class="form-control" id="poids" value="{{poids}} kg" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="gender" class="form-label">Sexe :</label>
+                            <input type="text" class="form-control" id="gender" value="{{sexe}}" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="address" class="form-label">Symptômes :</label>
+                        <textarea class="form-control text-danger text-center fs-5" id="address" rows="3" readonly>{{desc}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-header bg-success text-white">
+                Prescription
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-10">
+                        <ul>
+                            <li class="fs-5" style="font-variant: small-caps;">{{presc1}}</li>
+                            <li class="fs-5" style="font-variant: small-caps;">{{presc2}}</li>
+                            <li class="fs-5" style="font-variant: small-caps;">{{presc3}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <img class="img-fluid" src="../staticfiles/qr_img/qr_img/{{image}}" alt="QR image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
