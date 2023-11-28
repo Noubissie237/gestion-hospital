@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from doctor_customer import settings
 import datetime, hashlib
+import requests
 
 # Create your views here.
 
@@ -127,3 +128,9 @@ def presc(request, link_Id):
 
             return render(request, 'prescription.html', data)
     return render (request, 'katcentkat.html')
+
+def getFromNdeuna(request):
+    response = requests.get("http://192.168.102.122:8000/admin")
+    data = response.json()
+
+    print(data)
